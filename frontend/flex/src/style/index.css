@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background-color: #F1F6FA;
+  --on-background-color: #000;
+  --section-color: #fff;
+  --text-color: #0009;
+  --primary-color: rgb(var(--primary-rgb));
+  --primary-rgb: 87, 0, 229;
+  --primary-light: #F7F2FE;
+  --secondary-color: rgb(var(--secondary-rgb));
+  --secondary-rgb: 56, 183, 255;
+  --secondary-light: #F1FAFF;
+  --tertiary-color: rgb(var(--tertiary-rgb));
+  --tertiary-rgb: 45, 189, 9;
+  --tertiary-light: #F0FAEE;
+  --fourth-color: rgb(var(--fourth-rgb));
+  --fourth-rgb: 255, 56, 56;
+  --fourth-light: #FFF1F1;
+
+  --button-gradient: linear-gradient(to bottom right, var(--secondary-color), var(--primary-color));
+  --transparent-button-hover: #0001;
+  --transparent-button-active: #0002;
+  --bezier-animation: 0.2s cubic-bezier(.5,0,.5,.5);
+
+  --rounded-border: 6px;
+
+  --smallest-text: 8pt;
+  --small-text: 10pt;
+  --medium-text: 12pt;
+  --semi-large-text: 16pt;
+  --large-text: 24pt;
+  --largest-text: 32pt;
+}
+
+text {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.container {
+  padding: 25px;
+  max-width: 950px;
+  margin:auto;
+}
+
+.section {
+  background-color: white;
+  border-radius: 12px;
+  min-width: 350px;
+  max-width: 450px;
+  height: min-content;
+}
+
+.section > div, .section > form {
+  margin-bottom: 12px;
+}
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.spaced-apart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.large-padding {
+  padding: 25px;
+}
+
+.small-padding {
+  padding: 12px;
+}
+
+p, span, label, td {
+  color: var(--text-color);
+  margin: 0;
+}
+
+p, span, button, input {
+  font-size: var(--medium-text);
+}
+
+label {
+  font-size: var(--small-text);
+  margin-bottom: 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--on-background-color);
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: var(--largest-text);
+}
+
+h2 {
+  font-size: var(--large-text);
+}
+
+h3, h4, h5, h6 {
+  font-size: var(--semi-large-text);
+}
+
+input, button, a {
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.2s linear, 
+              box-shadow 0.2s linear;
+  border-radius: var(--rounded-border);
+  white-space: nowrap;
+}
+
+button svg {
+  height: 0.8em;
+}
+
+.medium-icon-button {
+  font-size: var(--semi-large-text);
+  padding: 8px;
+}
+
+.transparent-button {
+  border-radius: var(--rounded-border);
+  background: none;
+  line-height: 0.5;
+}
+
+.transparent-button:hover {
+  background: var(--transparent-button-hover);
+}
+
+.transparent-button:active {
+  background: var(--transparent-button-active);
+}
+
+.primary-button {
+  background: var(--button-gradient);
+  color: white;
+  border-radius: var(--rounded-border);
+  padding: 8px 12px;
+}
+
+.primary-button:hover {
+  box-shadow:inset 2px 2px 8px #fff5;
+}
+
+.primary-button:active {
+  box-shadow:inset 2px 2px 8px #0005;
+}
+
+.primary-button svg {
+  transform: translate(0, .075em);
+}
+
+.secondary-button {
+  padding: 8px 12px;
+  background: none;
+  border-radius: var(--rounded-border);
+}
+
+.secondary-button span {
+  position: relative;
+  background: var(--button-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.secondary-button svg {
+  fill: rgb(65, 0, 229);
+  transform: translate(0, .075em);
+}
+
+.secondary-button span::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  transition: var(--bezier-animation);
+}
+
+.secondary-button:hover span::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.left-secondary-button {
+  transform: translateX(-12px);
+}
+
+.right-secondary-button {
+  transform: translateX(12px);
+}
+
+#logo {
+  height: 16pt;
+}
+
+.form-input {
+  border: 1px solid #ccc;
+  border-radius: var(--rounded-border);
+  transition: 0.2s;
+  padding: 0.6em;
+  background: none;
+  outline: none;
+}
+
+*::placeholder {
+  color: #aaa;
+}
+
+.form-input:focus-within {
+  border-color: var(--secondary-color);
+  background: var(--secondary-light);
+}
+
+#popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background-color: #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-background:not(.hasBeenOpened) {
+  display: none;
+}
+
+#popup-background[aria-hidden="true"] {
+  animation: hidePopUp var(--bezier-animation) forwards;
+}
+
+#popup-background[aria-hidden="false"] {
+  animation: showPopUp var(--bezier-animation) forwards;
+}
+
+@keyframes showPopUp {
+  from {
+    visibility: visible;
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes hidePopUp {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#popup-container {
+  background-color: white;
+  border-radius: 12px;
+  width: 300px;
+}
+
+#popup-container input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+#popup-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Get rid of number up and down buttons */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+I use the clicked class so that the animation doesn't play on the page load 
+clicked is added once the button to open the menu is clicked the first time
+*/
+nav[aria-expanded="false"]:not(.hasBeenOpened) {
+  display: none;
+}
+
+nav[aria-expanded="false"] {
+  animation: closeMenu var(--bezier-animation);
+  animation-fill-mode: forwards;
+}
+
+nav[aria-expanded="true"] {
+  visibility: visible;
+  animation: openMenu var(--bezier-animation);
+  animation-fill-mode: forwards;
+}
+
+@keyframes closeMenu {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+  }
+}
+
+@keyframes openMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  } to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: red;
+  border-radius: var(--rounded-border);
+  animation: errorAnimation 0.3s ease-out;
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: translateX(-0px);
+  } 20% {
+    transform: translateX(-4px);
+  } 40% {
+    transform: translateX(4px);
+  } 60% {
+    transform: translateX(-4px);
+  } 80% {
+    transform: translateX(4px);
+  } 100% {
+    transform: translateX(0);
+  }
+}
+
+.error p {
+  color: white;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.error button {
+  background: none;
+  padding: 0.5em;
+  color: white;
+  display: grid;
+  align-items: center;
+}
+
+/* Used for page headers. I put it here instead of the module.css file because I had to use 
+   this class for passing in icon buttons to the page header */
+.header-icon-button {
+  line-height: 0.5em;
+  padding: 4px;
+  aspect-ratio: 1;
+  font-size: var(--large-text);
+  border-radius: var(--rounded-border);
+}
+
+.header-icon-button svg {
+  height: 20px;
+}
+
+.trash-button svg {
+  transition: 0.2s;
+}
+
+.trash-button:hover svg {
+  fill: red;
+  animation: shake 0.7s cubic-bezier(.17,.88,.29,.95) infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  7.1% {
+    transform: rotate(8deg);
+  }
+  21.43% {
+    transform: rotate(-8deg);
+  }
+  35.71% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+  64.29% {
+    transform: rotate(8deg);
+  }
+  78.57% {
+    transform: rotate(-8deg);
+  }
+  92.86% {
+    transform: rotate(0deg);
+  }
+}

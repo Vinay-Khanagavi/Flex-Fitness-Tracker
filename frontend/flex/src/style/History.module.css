@@ -1,0 +1,10 @@
+.graphsWrapper:not(:last-of-type) {
+  padding-bottom: 0;
+} 
+
+.plot {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+}

@@ -1,0 +1,13 @@
+#errorContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px;
+  z-index: 100;
+}
+
+#error {
+  max-width: 450px;
+  margin: auto;
+}

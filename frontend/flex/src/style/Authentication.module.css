@@ -1,0 +1,110 @@
+#outerAuthWrapper {
+  margin: auto;
+  max-width: 450px;
+  height: 100vh;
+  position: relative;
+}
+
+#innerAuthWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px;
+}
+
+#authForm {
+  position: relative;
+  margin: 25px;
+  flex-grow: 1;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+#authForm > div {
+  margin-bottom: 1em;
+}
+
+#authForm h1 {
+  margin: 0;
+}
+
+#authForm label, #authForm input {
+  display: block;
+}
+
+.input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border: 1px solid #ccc;
+  border-radius: var(--rounded-border);
+  transition: 0.2s;
+}
+
+/* Targets the password input, since it has .input applied to the div around the input and icon button */
+.input input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.6em;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.input button {
+  background: none;
+  padding: 0.5em;
+  display: grid;
+  align-items: center;
+}
+
+#authForm > p {
+  margin: 0 0 2em 0;
+}
+
+#switchPage {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--secondary-color);
+  padding: .5em;
+  font-size: inherit;
+}
+
+#switchPage:hover {
+  text-decoration: underline;
+}
+
+#authForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  padding: 0.6em;
+}
+
+.error {
+  border-color: red;
+  background-color:rgba(255, 0, 0, 0.05);
+  animation: errorAnimation 0.3s ease-out;
+}
+
+.errorMessage {
+  font-size: var(--small-text);
+  color: red;
+}
+
+#errorBox {
+  position: absolute;
+  width: 100%;
+  margin-top: 37px;
+  left: 0;
+}

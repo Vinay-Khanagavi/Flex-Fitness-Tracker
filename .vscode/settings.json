@@ -1,0 +1,8 @@
+{
+    "gitlens.views.searchAndCompare.pullRequests.enabled": false,
+    "gitlens.views.searchAndCompare.files.compact": false,
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.rebaseEditor.showDetailsView": false,
+    "gitlens.menus": false,
+    "gitlens.mode.statusBar.enabled": false
+}
