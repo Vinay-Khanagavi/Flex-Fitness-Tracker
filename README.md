@@ -10,17 +10,21 @@ The Fitness Tracker for Wellbeing project is a comprehensive platform designed t
 - Analytics Dashboard and Graphs: Visualize progress through interactive charts and reports.
   
 # System Modeling 
+<p align="center">
 ![image](https://github.com/user-attachments/assets/d48ba496-0560-4b14-863e-ccdac5a34e1b)
-
+</p>
 # Testing
+<p align="center">
 ![image](https://github.com/user-attachments/assets/a9641c6c-1de7-44ca-bc68-40d72298792d)
-
+</p>
 # Frontend
+<p align="center">
 ![image](https://github.com/user-attachments/assets/7ad4a680-c445-4ae6-bb23-2a9fdc54ab57)
-
+</p>
 # Backend
+<p align="center">
 ![image](https://github.com/user-attachments/assets/a7f5b15f-edd2-4323-a9e1-da2bdc84336f)
-
+</p>
 # Taking requirements from End-Users
 
 <p align="center">
