@@ -23,5 +23,10 @@ The Fitness Tracker for Wellbeing project is a comprehensive platform designed t
 
 # Taking requirements from End-Users
 
-![image](https://github.com/user-attachments/assets/197b76cc-13e5-4282-a60b-7e5a78c65e39)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/197b76cc-13e5-4282-a60b-7e5a78c65e39" width="300" height="200">
+  <img src="https://github.com/user-attachments/assets/020a1750-1d08-4173-b4c9-6cf838f9706d" width="300" height="200">
+</p>
+
+
 
